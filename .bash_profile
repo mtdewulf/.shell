@@ -9,4 +9,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
 alias tmux='TERM=screen-256color tmux'
 
-. .bashrc
+. $HOME/.bashrc
