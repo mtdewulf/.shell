@@ -1,0 +1,7 @@
+[user]
+	email = mtdewulf@obsrvbl.com
+	name = Michael DeWulf
+[push]
+	default = simple
+[color]
+	diff = auto
