@@ -8,5 +8,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
 alias tmux='TERM=screen-256color tmux'
+alias cleanpy='for file in $(find -name "*.pyc"); do rm $file; done'
 
 . $HOME/.bashrc
