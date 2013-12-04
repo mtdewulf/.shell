@@ -7,7 +7,7 @@ set -o vi
 source /usr/local/bin/virtualenvwrapper.sh
 
 eval $(ssh-agent) > /dev/null
-ssh-add 2&>1 > /dev/null
+ssh-add > /dev/null 2>&1
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
 
 alias tmux='TERM=screen-256color tmux'
