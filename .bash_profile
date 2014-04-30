@@ -5,8 +5,6 @@ export TMOUT=0
 
 set -o vi
 
-source /usr/local/bin/virtualenvwrapper.sh
-
 eval $(ssh-agent) > /dev/null
 ssh-add > /dev/null 2>&1
 
