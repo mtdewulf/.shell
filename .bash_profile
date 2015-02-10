@@ -1,5 +1,4 @@
 export EDITOR=vi
-export GREP_OPTIONS='--color=auto'
 export PATH=/usr/local/bin:$PATH
 export TERM=screen-256color
 export TMOUT=0
@@ -10,6 +9,7 @@ set -o vi
 eval $(ssh-agent) > /dev/null
 ssh-add > /dev/null 2>&1
 
+alias grep='ggrep --color=auto'
 alias cleanpy='for file in $(find -name "*.pyc"); do rm $file; done'
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
 alias tmux='TERM=screen-256color tmux'
