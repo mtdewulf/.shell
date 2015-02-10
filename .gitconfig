@@ -1,7 +1,10 @@
 [user]
-	email = mtdewulf@obsrvbl.com
+	email = mtdewulf@gmail.com
 	name = Michael DeWulf
 [push]
 	default = simple
 [color]
 	diff = auto
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

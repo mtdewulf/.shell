@@ -2,6 +2,7 @@ export TERM=screen-256color
 export EDITOR=vi
 export WORKON_HOME=~/Envs
 export TMOUT=0
+export GREP_OPTIONS='--color=auto'
 
 set -o vi
 
