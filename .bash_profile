@@ -12,7 +12,7 @@ set -o vi
 eval $(ssh-agent) > /dev/null
 ssh-add > /dev/null 2>&1
 
-alias cleanpy='for file in $(find -name "*.pyc"); do rm $file; done'
+alias cleanpy='for file in $(find . -name "*.pyc"); do rm $file; done'
 alias grep='ggrep --color=auto'
 alias sed='gsed'
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
@@ -31,4 +31,7 @@ function pyrepo() {
     cd $HOME/Work/repos/$1;
     source $HOME/.virtualenvs/$1/bin/activate;
     set_tmux_title $1;
+    export DJANGODB_URL=postgres://mtdewulf@127.0.0.1/djangodb
+    export SNAPSHOT_URL=postgres://mtdewulf@127.0.0.1/snapshot
+    # export WAREHOUSE_URL=postgresql+psycopg2://mtdewulf@127.0.0.1/test_onworker
 }
