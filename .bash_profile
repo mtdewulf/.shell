@@ -33,6 +33,5 @@ function pyrepo() {
     set_tmux_title $1;
     export DJANGODB_URL=postgres://mtdewulf@127.0.0.1/djangodb
     export SNAPSHOT_URL=postgres://mtdewulf@127.0.0.1/snapshot
-    export WAREHOUSE_URL=postgresql+psycopg2://mtdewulf@127.0.0.1/test_onworker
-    export CI_PSQL=1
+    # export WAREHOUSE_URL=postgresql+psycopg2://mtdewulf@127.0.0.1/test_onworker
 }
