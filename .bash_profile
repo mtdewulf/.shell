@@ -1,4 +1,5 @@
 export EDITOR=vim
+export LANG="en_US.UTF-8"
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"  # gnu-sed
 export MANPATH="/usr/local/opt/grep/share/man:$MANPATH"  # gnu-grep
@@ -18,6 +19,7 @@ alias sed='gsed'
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
 alias tmux='TERM=screen-256color tmux'
 alias vi=vim
+alias ls='ls -G'
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -33,5 +35,6 @@ function pyrepo() {
     set_tmux_title $1;
     export DJANGODB_URL=postgres://mtdewulf@127.0.0.1/djangodb
     export SNAPSHOT_URL=postgres://mtdewulf@127.0.0.1/snapshot
-    # export WAREHOUSE_URL=postgresql+psycopg2://mtdewulf@127.0.0.1/test_onworker
+    # export WAREHOUSE_URL=postgres://mtdewulf@127.0.0.1/warehouse
+    # export WAREHOUSE_URL=postgresql+psycopg2://mtdewulf@localhost/test_onworker
 }
