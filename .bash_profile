@@ -1,5 +1,6 @@
 export EDITOR=vim
 export LANG="en_US.UTF-8"
+export PAGER='less -S -F'
 export PATH=/usr/local/bin:$PATH  # brew
 export PATH=/usr/local/sbin:$PATH  # brew
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"  # gnu-sed
@@ -14,7 +15,7 @@ set -o vi
 eval $(ssh-agent) > /dev/null
 ssh-add > /dev/null 2>&1
 
-alias cleanpy='for file in $(find . -name "*.pyc"); do rm $file; done'
+alias cleanpy='find . -name "*.pyc" -delete; find . -name "__pycache__" -delete'
 alias grep='ggrep --color=auto'
 alias sed='gsed'
 alias ssh='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=15'
